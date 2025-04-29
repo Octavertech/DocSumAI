@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+pydantic
+pdfplumber
+openai
+transformers
+requests
+torch
+python-docx
+services
+nltk
+pdfminer.six 
+pymupdf
+dotenv
+google-generativeai
+python-multipart

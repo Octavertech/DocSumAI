@@ -1,0 +1,189 @@
+/* Basic header styles */
+.header {
+  background-color: rgb(4, 36, 36);
+  padding: 1rem 2rem;  /* Padding on left and right of the entire header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: padding 0.3s ease;
+}
+
+.subTitle{
+  color: white;
+}
+
+.green{
+  color: #69e0b2
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  width: 250px; /* Adjusted logo size */
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logoImage:hover {
+  cursor: pointer;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-evenly; /* Space out the links evenly */
+  align-items: center;
+  gap: 1.5rem; /* Space between each link */
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.navLinkContainer {
+  display: inline-block;
+}
+
+/* Navigation Links */
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem; /* Padding between the links */
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+  transition: transform 0.3s ease, color 0.3s ease;
+  white-space: nowrap; /* Prevent text wrapping */
+  max-width: 100%; /* Ensure it doesn’t break the layout */
+}
+
+/* Icons */
+.navIcon {
+  font-size: 1.2rem;
+  color: #fff;  /* Ensure icons remain visible */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover Effect */
+.navLink:hover {
+  transform: scale(1.1);
+  background: linear-gradient(rgb(66, 230, 149) 0%, rgb(59, 178, 184) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navLink:hover .navIcon {
+  transform: scale(1.2);
+  filter: brightness(1.5) contrast(1.2);
+}
+
+/* Mobile Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburgerIcon {
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header {
+    padding: 1rem 2rem; /* Maintain padding on both sides */
+    flex-direction: column; /* Stack logo and navbar vertically */
+    align-items: center; /* Center-align the logo and links */
+    justify-content: flex-start; /* Align items from the top */
+  }
+
+  .logoImage {
+    width: 180px; /* Slightly smaller logo for tablet and mobile */
+  }
+
+  .navbar {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 1rem; /* Even space between items */
+    width: 100%; /* Ensure full width */
+    justify-content: center; /* Center the links */
+    margin-top: 1rem; /* Add some space between the logo and navbar */
+  }
+
+  .navLinkContainer {
+    text-align: center; /* Center the link text */
+    flex: 1; /* Allow links to stretch across the screen */
+  }
+
+  .navLink {
+    font-size: 1rem; /* Adjust font size for better legibility */
+    padding: 0.5rem 1rem; /* Adjust padding for a more compact fit */
+    white-space: nowrap; /* Prevent text from wrapping */
+    max-width: 100%; /* Ensure links stay in a single line */
+    text-align: center; /* Center text in the link */
+  }
+
+  .hamburger {
+    display: none; /* Hide the hamburger icon since we're displaying links in a row */
+  }
+}
+
+/* Mobile-specific header padding */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 2rem;  /* Keep padding for the header itself */
+    flex-direction: column; /* Stack logo and navbar vertically */
+    align-items: center; /* Center-align the logo and links */
+    justify-content: flex-start; /* Align items from the top */
+  }
+
+  .logoImage {
+    width: 180px; /* Smaller logo for tablet-size screens */
+  }
+
+  .navbar {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 1rem; /* Even space between items */
+    width: 100%; /* Ensure full width */
+    justify-content: center; /* Center the links */
+    margin-top: 1rem; /* Add some space between the logo and navbar */
+    padding: 0 3rem; /* Apply padding only to the links (left and right) */
+  }
+
+  .navLinkContainer {
+    text-align: center; /* Center the link text */
+    flex: 1; /* Allow links to stretch across the screen */
+    margin-left: -16px;
+  }
+
+  .navLink {
+    font-size: 0.8rem; /* Further reduce font size for small screens */
+    padding: 0.4rem 1rem; /* Adjust padding for a more compact layout */
+  }
+
+
+  .hamburger {
+    display: none; /* Hide the hamburger icon since we're displaying links in a row */
+  }
+
+  .caseStudyImageContainer {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.caseStudyImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional, if you want rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional, adds a shadow effect */
+}
+
+}
+
+
